@@ -2,11 +2,11 @@ const notes = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
 const { readFromFile, readAndAppend, writeToFile, } = require('../public/assets/js/fsUtils');
 
-
+//GET Route
 notes.get('/', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
-
+//POST ROUTE
 notes.post('/', (req, res) => {
     console.log(req.body);
     const { title, text } = req.body;
@@ -24,7 +24,7 @@ notes.post('/', (req, res) => {
     }
 });
 
-// DELETE api/notes/id should deleteNotes containing the unique id
+// DELETE Route for the unique id
 notes.delete('/:id', (req, res) => {
     const noteId = req.params.id;
     readFromFile('./db/db.json')
@@ -32,6 +32,7 @@ notes.delete('/:id', (req, res) => {
         .then((json) => {
             const results = json.filter((note) => note.id !== noteId);
             writeToFile('./db/db.json', results);
+            // Respond to the DELETE request
             res.json(`Note ${noteId} has been deleted`);
         });
 });

@@ -1,6 +1,6 @@
 # Note-Taker
 
-[Deployed live on HEROKU APP](https://drive.google.com/file/d/1tDyg0xN0sM2IbZiQ4sBu0ks88VuItEUm/view?usp=sharing) 
+[Deployed live on HEROKU APP]() 
 
 
 ## Description
@@ -31,7 +31,6 @@ For a user to install this application, the user will have to clone the reposito
 Next in the command line run 'npm i' to get the npm package.
 ```md
 npm i 
-npm i uuid
 ```
 
 ## Usage 
@@ -41,7 +40,8 @@ Once the user has installed the correct packages, open the terminal and run the 
 node server.js
 ```
 
-[Screenshots]()
+[index screenshot!](/Assignments/Note-Taker/images/screenshot-1.png)
+[notes screenshot!](/Assignments/Note-Taker/images/screenshot-2.png)
 ## Questions 
 
 Any questions, please ask:
